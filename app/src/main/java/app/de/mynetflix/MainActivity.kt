@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import app.de.mynetflix.model.Category
 import app.de.mynetflix.util.CategoryTask
 
-class MainActivity : AppCompatActivity(), CategoryTask.Callback {
+class MainActivity(override val id: String) : AppCompatActivity(), CategoryTask.Callback {
 
     private lateinit var progress: ProgressBar
     private lateinit var adapter: CategoryAdapter
@@ -32,8 +32,7 @@ class MainActivity : AppCompatActivity(), CategoryTask.Callback {
         val rv: RecyclerView = findViewById(R.id.rv_main)
         rv.layoutManager = LinearLayoutManager(this)
         rv.adapter = adapter
-
-        CategoryTask(this).execute("https://api.tiagoaguiar.co/netflixapp/home?apiKey=714b3b95-2ad1-4461-99b8-864f68bf4f49")
+        CategoryTask(this).execute("https://api.tiagoaguiar.co/netflixapp/movie/$id?apiKey=81bb7fb8-5b47-43bf-a074-4438e54ca67d")
     }
 
     override fun onPreExecute() {

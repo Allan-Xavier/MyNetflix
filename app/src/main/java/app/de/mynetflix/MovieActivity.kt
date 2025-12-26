@@ -45,7 +45,7 @@ class MovieActivity : AppCompatActivity(), MovieTask.Callback {
 
         val id = intent?.getIntExtra("id", 0) ?: throw IllegalStateException("ID não foi encontrado!")
 
-        val url = "https://api.tiagoaguiar.co/netflixapp/movie/$id?apiKey=714b3b95-2ad1-4461-99b8-864f68bf4f49"
+        val url = "https://api.tiagoaguiar.co/netflixapp/movie/$id?apiKey=81bb7fb8-5b47-43bf-a074-4438e54ca67d"
 
         MovieTask(this).execute(url)
 

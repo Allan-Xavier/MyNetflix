@@ -20,6 +20,8 @@ class CategoryTask(private val callback: Callback) {
     private val executor = Executors.newSingleThreadExecutor()
 
     interface Callback {
+        abstract val id: String
+
         fun onPreExecute()
         fun onResult(categories: List<Category>)
         fun onFailure(message: String)
