@@ -32,7 +32,7 @@ class MainActivity(override val id: String) : AppCompatActivity(), CategoryTask.
         val rv: RecyclerView = findViewById(R.id.rv_main)
         rv.layoutManager = LinearLayoutManager(this)
         rv.adapter = adapter
-        CategoryTask(this).execute("https://atway.tiagoaguiar.co/fenix/netflixapp/$id?apiKey=81bb7fb8-5b47-43bf-a074-4438e54ca67d")
+        CategoryTask(this).execute("https://atway.tiagoaguiar.co/fenix/netflixapp/home?apiKey=81bb7fb8-5b47-43bf-a074-4438e54ca67d")
     }
 
     override fun onPreExecute() {
